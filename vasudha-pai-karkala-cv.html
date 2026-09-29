@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vasudha Pai Karkala — Curriculum Vitae</title>
+<meta name="author" content="Vasudha Pai Karkala">
+<meta name="description" content="Curriculum vitae of Vasudha Pai Karkala, researcher in cheminformatics and computational chemistry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #faf8f3;
+    --ink: #1f2420;
+    --pine: #3f5d4e;
+    --pine-dim: #6f8a7c;
+    --taupe: #8a7f6a;
+    --rule: #dad4c5;
+    --rule-strong: #c3bca8;
+    --max-width: 760px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Sans 3", -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  a { color: var(--pine); text-decoration-color: var(--pine-dim); text-underline-offset: 2px; }
+  a:hover { color: var(--ink); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--pine); outline-offset: 2px; }
+
+  main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+
+  /* ---------- Header ---------- */
+
+  .cv-header { margin-bottom: 2.75rem; }
+
+  .cv-header h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 2.65rem);
+    letter-spacing: -0.01em;
+    margin: 0 0 0.15em;
+  }
+
+  .cv-header p.tagline {
+    margin: 0 0 1.1em;
+    color: var(--pine);
+    font-size: 1.02rem;
+  }
+
+  address {
+    font-style: normal;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em 1.4em;
+    font-size: 0.94rem;
+    color: var(--taupe);
+    padding: 0;
+    margin: 0;
+  }
+
+  address a { color: var(--ink); }
+
+  address .icon {
+    display: inline-block;
+    width: 1em;
+    margin-right: 0.35em;
+  }
+
+  /* ---------- Sections ---------- */
+
+  section.cv-section {
+    margin-top: 2.6rem;
+  }
+
+  section.cv-section > h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 1.18rem;
+    margin: 0 0 0.9rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--rule-strong);
+    color: var(--ink);
+  }
+
+  /* ---------- Entries (experience / education / talks) ---------- */
+
+  article.entry {
+    margin-bottom: 1.5rem;
+  }
+  article.entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .entry-head h3 {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin: 0;
+  }
+
+  .entry-org {
+    display: block;
+    font-weight: 400;
+    color: var(--pine);
+    font-size: 0.96rem;
+    margin-top: 0.1em;
+  }
+
+  .entry-date {
+    white-space: nowrap;
+    font-size: 0.88rem;
+    color: var(--taupe);
+    text-align: right;
+  }
+
+  .entry ul.highlights {
+    margin: 0.55rem 0 0;
+    padding-left: 1.1rem;
+  }
+
+  .entry ul.highlights li {
+    margin-bottom: 0.35rem;
+    padding-left: 0.15rem;
+  }
+  .entry ul.highlights li:last-child { margin-bottom: 0; }
+
+  /* ---------- Coursework definition lists ---------- */
+
+  dl.coursework {
+    margin: 0.7rem 0 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.9rem;
+    row-gap: 0.3rem;
+    font-size: 0.92rem;
+  }
+
+  dl.coursework dt {
+    font-weight: 600;
+    color: var(--pine);
+    grid-column: 1;
+    align-self: start;
+  }
+
+  dl.coursework dd {
+    grid-column: 2;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  dl.coursework dd ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 0;
+  }
+
+  dl.coursework dd ul li:not(:last-child)::after {
+    content: "\2002\00b7\2002"; /* en space · en space */
+    color: var(--rule-strong);
+  }
+
+  /* ---------- Honors ---------- */
+
+  dl.honors {
+    margin: 0;
+  }
+
+  dl.honors dt {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  dl.honors dt:first-child { margin-top: 0; }
+
+  dl.honors dd {
+    margin: 0.2rem 0 0;
+    color: var(--ink);
+  }
+
+  /* ---------- Skills ---------- */
+
+  .skills dt {
+    font-weight: 600;
+    color: var(--pine);
+    margin-top: 0.9rem;
+  }
+  .skills dt:first-child { margin-top: 0; }
+  .skills dd {
+    margin: 0.25rem 0 0;
+  }
+
+  .skills dd ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.5rem;
+  }
+
+  .skills dd ul li {
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.15rem 0.55rem;
+    font-size: 0.87rem;
+  }
+
+  /* ---------- abbr ---------- */
+
+  abbr {
+    text-decoration: none;
+    border-bottom: 1px dotted var(--rule-strong);
+    cursor: help;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer.cv-footer {
+    margin-top: 3.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.82rem;
+    color: var(--taupe);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media print {
+    body { background: #fff; }
+    main { padding: 0.5in; max-width: none; }
+    section.cv-section { break-inside: avoid; }
+    article.entry { break-inside: avoid; }
+  }
+
+  @media (max-width: 480px) {
+    .entry-head { flex-direction: column; gap: 0.15rem; }
+    .entry-date { text-align: left; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a { transition: color 0.15s ease; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header class="cv-header">
+    <h1>Vasudha Pai Karkala</h1>
+    <p class="tagline">Cheminformatics &amp; Computational Chemistry Researcher</p>
+    <address>
+      <span><span class="icon" aria-hidden="true">&#9993;</span><a href="mailto:paivasudha6karkala@gmail.com">paivasudha6karkala@gmail.com</a></span>
+      <span><span class="icon" aria-hidden="true">&#128279;</span><a href="https://linkedin.com/in/vasudha-pai-k0309/" rel="me noopener" target="_blank">linkedin.com/in/vasudha-pai-k0309</a></span>
+      <span><span class="icon" aria-hidden="true">&#9084;</span><a href="https://github.com/Vasudha-pai" rel="me noopener" target="_blank">github.com/Vasudha-pai</a></span>
+    </address>
+  </header>
+
+  <!-- ============ RESEARCH EXPERIENCE ============ -->
+  <section class="cv-section" aria-labelledby="research-heading">
+    <h2 id="research-heading">Research Experience</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Research Intern
+          <span class="entry-org"><abbr title="Associated Laboratory for Green Chemistry">LAQV/REQUIMTE</abbr>, Portugal</span>
+        </h3>
+        <p class="entry-date"><time datetime="2026-05">May 2026</time> – Present</p>
+      </div>
+      <ul class="highlights">
+        <li>Contributed to developing cheminformatics workflows with <abbr title="RDKit is an open-source cheminformatics software toolkit">RDKit</abbr> to analyze <abbr title="ChEMBL is a manually curated database of bioactive molecules">ChEMBL</abbr> bioactivity data and identify potential IL-6 inhibitors.</li>
+        <li><abbr title="Computer-Aided Drug Design">CADD</abbr> and cheminformatics to accelerate immunotherapy-focused drug discovery.</li>
+        <li>Developed <abbr title="Quantitative Structure–Activity Relationship">QSAR</abbr> models to optimize CAR-T cell therapy.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Summer Research Intern
+          <span class="entry-org"><abbr title="Associated Laboratory for Green Chemistry">LAQV/REQUIMTE</abbr>, Portugal</span>
+        </h3>
+        <p class="entry-date"><time datetime="2026-06">June 2026</time> – <time datetime="2026-07">July 2026</time></p>
+      </div>
+      <ul class="highlights">
+        <li>Worked on the synthesis and development of biocompatible ionic liquids as co-solvents to improve the solubility of <abbr title="Biopharmaceutics Classification System">BCS</abbr> Class IV drugs in physiological media.</li>
+        <li>Characterized and evaluated the ionic liquids with sulfamethoxazole and acetazolamide.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Young Research Fellow in Computational Chemistry
+          <span class="entry-org">I-Hub Data, <abbr title="International Institute of Information Technology, Hyderabad">IIIT-H</abbr>, India</span>
+        </h3>
+        <p class="entry-date"><time datetime="2024-08">Aug 2024</time> – <time datetime="2025-08">Aug 2025</time></p>
+      </div>
+      <ul class="highlights">
+        <li>Analyzed trajectories for the PLAS 20K and PLAS HES-5K datasets to extract and interpret dynamic patterns of protein–ligand complexes from <abbr title="Steered Molecular Dynamics">SMD</abbr>.</li>
+        <li>Conducted <abbr title="Linear Interaction Energy">LIE</abbr> analysis for protein–ligand complexes to evaluate binding affinities.</li>
+        <li>Calculated the water number between the protein–ligand interactions.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Project Intern
+          <span class="entry-org"><abbr title="Dr. Reddy's Institute of Life Sciences">DRILS</abbr>, India</span>
+        </h3>
+        <p class="entry-date"><time datetime="2024-01">Jan 2024</time> – <time datetime="2024-07">July 2024</time></p>
+      </div>
+      <ul class="highlights">
+        <li>Worked on structurally characterizing the gain-of-function mutation of p53 and understanding its allosteric interactions with proteins.</li>
+        <li>Employed molecular dynamics simulations using GROMACS to probe allosteric behaviour in loss-of-function and gain-of-function mutants.</li>
+        <li>Used tools like MD-TASK to understand the single-nucleotide variants present in the mutants.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ============ PRESENTATIONS ============ -->
+  <section class="cv-section" aria-labelledby="talks-heading">
+    <h2 id="talks-heading">Poster and Oral Presentations</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>CS-3 Strasbourg Summer School</h3>
+        <p class="entry-date"><time datetime="2026-06">June 2026</time></p>
+      </div>
+      <ul class="highlights">
+        <li>Presented a poster on <cite>“Integrating Morgan Fingerprints and Physicochemical Descriptors for Solubility Prediction”</cite> at the Strasbourg Summer School.</li>
+        <li>Developed hybrid datasets to predict aqueous solubility using Random Forest and XGBoost.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Tech For Sustainable Futures</h3>
+        <p class="entry-date"><time datetime="2025-03">March 2025</time></p>
+      </div>
+      <ul class="highlights">
+        <li>Presented a poster on <cite>“From Data to Discovery: PLAS-20K and AP Dataset”</cite> at the R&amp;D Showcase 2025 — <abbr title="International Institute of Information Technology, Hyderabad">IIIT-H</abbr>.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ============ HONORS ============ -->
+  <section class="cv-section" aria-labelledby="honors-heading">
+    <h2 id="honors-heading">Honors and Achievements</h2>
+    <dl class="honors">
+      <dt>Erasmus Mundus Scholarship</dt>
+      <dd>Recipient of the Erasmus Mundus Joint Master's Scholarship (ChEMoinformatics+).</dd>
+
+      <dt>Achiever's Scholarship</dt>
+      <dd>Secured the Achiever's Scholarship after placing first in the Bioinformatics master's program.</dd>
+
+      <dt>Second Place, Biotech Hackathon</dt>
+      <dd>Won second prize in the Manipal Biotech Hackathon, conducted by the Manipal–<abbr title="Government of Karnataka">GOK</abbr> Bioincubator.</dd>
+    </dl>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="cv-section" aria-labelledby="education-heading">
+    <h2 id="education-heading">Education</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Erasmus Mundus Joint Master's in Chemoinformatics+
+          <span class="entry-org">Portugal and France — MS in Bio-Organic Chemistry (Lisbon) and Cheminformatics (Strasbourg)</span>
+        </h3>
+        <p class="entry-date"><time datetime="2025-09">Sept 2025</time> – Present</p>
+      </div>
+      <dl class="coursework">
+        <dt>Coursework</dt>
+        <dd>
+          <ul>
+            <li>Asymmetric Organic Chemistry</li>
+            <li>Python</li>
+            <li>Medicinal Chemistry</li>
+            <li>Analytical Chemistry</li>
+            <li>Synthetic Organic Chemistry</li>
+            <li>Computational Chemistry</li>
+          </ul>
+        </dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><abbr title="Manipal Academy of Higher Education">MAHE</abbr>, India
+          <span class="entry-org">MS in Bioinformatics</span>
+        </h3>
+        <p class="entry-date"><time datetime="2022-08">Aug 2022</time> – <time datetime="2024-07">July 2024</time></p>
+      </div>
+      <dl class="coursework">
+        <dt>Coursework</dt>
+        <dd>
+          <ul>
+            <li>Biocomputing</li>
+            <li>Structural Bioinformatics</li>
+            <li>Genomics and Proteomics</li>
+            <li>R Programming</li>
+          </ul>
+        </dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Osmania University, India
+          <span class="entry-org">BS in Biotechnology, Microbiology and Chemistry</span>
+        </h3>
+        <p class="entry-date"><time datetime="2018-06">June 2018</time> – <time datetime="2021-05">May 2021</time></p>
+      </div>
+      <dl class="coursework">
+        <dt>Coursework</dt>
+        <dd>
+          <ul>
+            <li>Cellular and Molecular Biology</li>
+            <li>Biochemistry</li>
+            <li>Industrial Biotechnology</li>
+            <li>Plant and Animal Tissue Culture</li>
+          </ul>
+        </dd>
+      </dl>
+    </article>
+  </section>
+
+  <!-- ============ VOLUNTEERING ============ -->
+  <section class="cv-section" aria-labelledby="volunteering-heading">
+    <h2 id="volunteering-heading">Volunteering</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><abbr title="Volunteering Service Organization">VSO</abbr>, <abbr title="Manipal Academy of Higher Education">MAHE</abbr></h3>
+      </div>
+      <ul class="highlights">
+        <li>Actively participated in VSO MAHE, contributing to community-driven projects engaging with children with special needs, providing English-language instruction and fostering an inclusive learning environment.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><abbr title="National Service Scheme">NSS</abbr></h3>
+      </div>
+      <ul class="highlights">
+        <li>Participated in the National Service Scheme, contributing to community welfare programs and outreach initiatives focused on social development, public health awareness, and environmental sustainability.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="cv-section" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Languages and Technical Skills</h2>
+    <dl class="skills">
+      <dt>Programming &amp; Computational Languages</dt>
+      <dd>
+        <ul>
+          <li>Python</li><li>Perl</li><li>R</li><li>HTML</li>
+        </ul>
+      </dd>
+      <dt>Data Science &amp; Cheminformatics Libraries</dt>
+      <dd>
+        <ul>
+          <li>NumPy</li><li>Pandas</li><li>Scikit-learn</li><li>Matplotlib</li>
+          <li>RDKit</li><li>Open Babel</li><li>GaussView</li><li>REINVENT4</li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <footer class="cv-footer">
+    <span>Vasudha Pai Karkala — Curriculum Vitae</span>
+    <span>Last updated <time datetime="2026-09">September 2026</time></span>
+  </footer>
+
+</main>
+</body>
+</html>
